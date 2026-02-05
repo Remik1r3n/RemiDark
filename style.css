@@ -2227,7 +2227,7 @@ textarea:-ms-input-placeholder {
 
 @media(max-width:700px) {
     body {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .comment-form .input-control {

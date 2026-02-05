@@ -4,7 +4,7 @@
  *
  * @package RemiDark 是一款 AMOLED 深色设计的主题，基于 Pinghsu。
  * @author Remik1r3n
- * @version 1.6.2_R1.02
+ * @version 1.6.2_R1.03
  * @link https://remiki.ren
  * 
  * 
