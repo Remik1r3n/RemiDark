@@ -1850,11 +1850,23 @@ textarea:-ms-input-placeholder {
 }
 
 #comments .response {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 1.2em;
+    font-weight: normal;
     display: block;
-    padding: 30px 0 30px 20px;
-    color: #999
+    margin: 30px 0 20px;
+    padding: 0 0 10px;
+    color: #c0c0c0;
+    border-bottom: 1px solid #222;
+}
+
+.comments-list-title {
+    font-size: 1.2em;
+    font-weight: normal;
+    display: block;
+    margin: 30px 0 20px;
+    padding: 0 0 10px;
+    color: #c0c0c0;
+    border-bottom: 1px solid #222;
 }
 
 #comments .response a {
@@ -1963,7 +1975,7 @@ textarea:-ms-input-placeholder {
 
 .comment-form {
     position: relative;
-    margin: 0 0 40px;
+    margin: 20px 0;
     padding: 10px 20px;
     border-radius: 3px;
     background: #000;
