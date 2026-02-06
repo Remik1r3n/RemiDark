@@ -51,11 +51,11 @@ $comments->alt(' comment-odd', ' comment-even');
                 <span class="comment-author<?php echo $commentClass; ?>"><?php echo $author; ?></span>
             </div>
             <div class="comment-content">
-                <span class="comment-author-at"><?php getCommentAt($comments->coid); ?></span> <?php $comments->content(); ?></p>
+                <span class="comment-author-at"><?php getCommentAt($comments->coid); ?></span><?php $comments->content(); ?>
             </div>
             <div class="comment-meta">
                 <time class="comment-time"><?php $comments->date('Y/m/d'); ?></time>
-                <span class="comment-reply" data-no-instant><?php $comments->reply('回复 Reply'); ?></span>
+                <span class="comment-reply"><?php $comments->reply('<span data-no-instant>回复 Reply</span>', true, 'data-no-instant rel="nofollow"'); ?></span>
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@ $comments->alt(' comment-odd', ' comment-even');
         <?php $this->comments()->to($comments); ?>
         <?php if($this->allow('comment')): ?>
         <span class="response">评论区 Comments<?php if($this->user->hasLogin()): ?> ℹ️ 您已以 <a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a> 身份登录。想以游客身份留言？请<a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>点击登出</a>。<?php endif; ?> <?php $comments->cancelReply(' / 取消回复 Cancel Reply'); ?></span>
-        <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form" onsubmit ="getElementById('misubmit').disabled=true;return true;">
+        <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form">
             <?php if(!$this->user->hasLogin()): ?>
             <input type="text" name="author" maxlength="12" id="author" class="form-control input-control clearfix" placeholder="Name" value="" required>
             <input type="email" name="mail" id="mail" class="form-control input-control clearfix" placeholder="Email" value="" <?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?>>
