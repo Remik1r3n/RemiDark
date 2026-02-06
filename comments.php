@@ -102,8 +102,27 @@ function threadedComments($comments, $options) {
             <p class="comment-notice">发表评论，即代表您授予我们必要的权限以处理和展示评论。评论一经发布无法撤回。<br>除垃圾评论、不合规的评论以外，所有评论都会在通过审核后被展示。<br>头像展示服务由 <a href="https://gravatar.com/" target="_blank" rel="nofollow">Gravatar</a> 提供。</p>
             
             <?php if($this->options->TurnstileSet == 'able'): ?>
-            <div class="cf-turnstile" data-sitekey="<?php echo $this->options->TurnstileSiteKey; ?>"></div>
+            <div id="turnstile-container" class="cf-turnstile" data-sitekey="<?php echo $this->options->TurnstileSiteKey; ?>"></div>
             <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+            <script>
+                document.addEventListener('click', function(e) {
+                    // 监听回复按钮和取消回复按钮的点击
+                    if (e.target.closest('.comment-reply a') || e.target.closest('#cancel-comment-reply-link')) {
+                        // 等待DOM移动操作完成后重新渲染Turnstile
+                        setTimeout(function() {
+                            if (typeof turnstile !== 'undefined') {
+                                var container = document.getElementById('turnstile-container');
+                                if (container) {
+                                    container.innerHTML = ''; // 清除旧的失效iframe
+                                    turnstile.render('#turnstile-container', {
+                                        sitekey: '<?php echo $this->options->TurnstileSiteKey; ?>'
+                                    });
+                                }
+                            }
+                        }, 100);
+                    }
+                });
+            </script>
             <p><small>注意：本站评论受 Cloudflare Turnstile 保护。请通过验证后再提交评论。</small></p>
             <?php endif; ?>
             
