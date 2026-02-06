@@ -4,7 +4,7 @@
  *
  * @package RemiDark Theme
  * @author Remik1r3n
- * @version 1.6.2_R1.05
+ * @version 1.6.2_R1.06
  * @link https://remiki.ren
  * 
  * 

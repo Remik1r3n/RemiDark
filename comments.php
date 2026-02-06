@@ -80,12 +80,12 @@ function threadedComments($comments, $options) {
     
     <?php if($this->allow('comment')): ?>
     
-    <h4 class="response">评论区 Comments</h4>
+    <h4 class="response">评论</h4>
     
     <div id="<?php $this->respondId(); ?>" class="respond">
     
         <?php if($this->user->hasLogin()): ?> 
-            <p><small>ℹ️ 您已以 <a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a> 身份登录。想以游客身份留言？请<a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>点击登出</a>。</small></p>
+            <p><small>    ℹ️ 您已以 <a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a> 身份登录。想以游客身份留言？请<a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>点击登出</a>。</small></p>
         <?php endif; ?> 
 
         <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form">
@@ -110,7 +110,7 @@ function threadedComments($comments, $options) {
             <div class="form-action-buttons">
                 <button type="submit" class="submit" id="misubmit"> ➤ </button>
                 <div class="cancel-comment-reply">
-                    <?php $comments->cancelReply('>> 取消回复 Cancel Reply'); ?>
+                    <?php $comments->cancelReply('> 取消回复 Cancel Reply'); ?>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@ function threadedComments($comments, $options) {
         </form>
     </div>
     <?php else : ?>
-        <span class="response">评论区已关闭<br>Comments disabled</span>
+        <span class="response">评论已关闭<br>Comments disabled</span>
     <?php endif; ?>
 
     <?php if ($comments->have()): ?>
