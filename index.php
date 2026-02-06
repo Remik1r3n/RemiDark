@@ -1,10 +1,10 @@
 <?php
 /**
- * RemiDark Theme
+ * RemiDark 是一款 AMOLED 深色设计的主题，基于 Pinghsu。
  *
- * @package RemiDark 是一款 AMOLED 深色设计的主题，基于 Pinghsu。
+ * @package RemiDark Theme
  * @author Remik1r3n
- * @version 1.6.2_R1.03
+ * @version 1.6.2_R1.04
  * @link https://remiki.ren
  * 
  * 

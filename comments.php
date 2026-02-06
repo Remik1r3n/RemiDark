@@ -71,7 +71,7 @@ $comments->alt(' comment-odd', ' comment-even');
     <div id="comments" class="clearfix">
         <?php $this->comments()->to($comments); ?>
         <?php if($this->allow('comment')): ?>
-        <span class="response">评论区 Comments<?php if($this->user->hasLogin()): ?> ℹ️ 您已以 <a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a> 身份登录。想以游客身份留言？请<a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>点击登出</a>。<?php endif; ?> <?php $comments->cancelReply('</br> > 取消回复 Cancel Reply'); ?></span>
+        <span class="response">评论区 Comments<?php if($this->user->hasLogin()): ?> ℹ️ 您已以 <a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a> 身份登录。想以游客身份留言？请<a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>点击登出</a>。<?php endif; ?> <?php $comments->cancelReply(' / 取消回复 Cancel Reply'); ?></span>
         <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form" onsubmit ="getElementById('misubmit').disabled=true;return true;">
             <?php if(!$this->user->hasLogin()): ?>
             <input type="text" name="author" maxlength="12" id="author" class="form-control input-control clearfix" placeholder="Name" value="" required>
