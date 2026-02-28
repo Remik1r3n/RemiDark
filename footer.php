@@ -25,11 +25,7 @@
             <div class="meta-item meta-copyright">
                 <div class="meta-copyright-info">
                     <a href="<?php $this->options->siteUrl(); ?>" class="info-logo">
-                        <?php if($this->options->footerLogoUrl): ?>
-                        <img src="<?php $this->options->footerLogoUrl();?>" alt="<?php $this->options->title() ?>" />
-                        <?php else : ?>
                         <?php $this->options->title() ?>
-                        <?php endif; ?>
                     </a>
                     <div class="info-text">
                         <p>Powered by Typecho</p>

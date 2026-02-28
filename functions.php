@@ -2,14 +2,8 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form) {
-    $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('页头 Logo 地址'), _t('填写图片 URL，支持 HTTPS 或相对协议 //，留空则显示站点名称。'));
-    $form->addInput($logoUrl->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
-    $footerLogoUrl = new Typecho_Widget_Helper_Form_Element_Text('footerLogoUrl', NULL, NULL, _t('页尾 Logo 地址'), _t('填写图片 URL，支持 HTTPS 或相对协议 //，留空则显示站点名称。'));
-    $form->addInput($footerLogoUrl->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('Favicon 地址'), _t('填写图片 URL，支持 HTTPS 或相对协议 //，留空则不设置 Favicon。'));
     $form->addInput($favicon->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
-    $iosicon = new Typecho_Widget_Helper_Form_Element_Text('iosicon', NULL, NULL, _t('Apple Touch Icon 地址'), _t('填写图片 URL，支持 HTTPS 或相对协议 //，留空则不设置。'));
-    $form->addInput($iosicon->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
 
     $searchPage = new Typecho_Widget_Helper_Form_Element_Text('searchPage', NULL, NULL, _t('独立搜索页地址'), _t('输入独立搜索页面（Template Page of Search）的完整 URL（需要带上 https://）。'));
     $form->addInput($searchPage->addRule('xssCheck', _t('请不要在链接中使用特殊字符')));

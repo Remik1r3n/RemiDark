@@ -12,8 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Cache-Control" content="no-transform"/>
     <meta http-equiv="Cache-Control" content="no-siteapp"/><?php if($this->options->favicon): ?>
-    <link rel="shortcut icon" href="<?php $this->options->favicon(); ?>"><?php endif;?><?php if($this->options->iosicon): ?>
-    <link rel="apple-touch-icon" href="<?php $this->options->iosicon();?>"><?php endif; ?>
+    <link rel="shortcut icon" href="<?php $this->options->favicon(); ?>"><?php endif;?>
     <title><?php $this->archiveTitle(array(
     'category'  =>  _t(' %s '),
     'search'    =>  _t(' %s '),

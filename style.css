@@ -597,12 +597,6 @@ textarea:-ms-input-placeholder {
     color: #fff;
 }
 
-.navbar-logo img {
-    width: auto;
-    height: 22px;
-    outline: 0
-}
-
 .navbar-menu {
     z-index: 10;
     display: inline-block;
@@ -2092,12 +2086,6 @@ textarea:-ms-input-placeholder {
     padding: 0 30px
 }
 
-.footer-meta .meta-copyright .info-logo img {
-    height: 32px;
-    margin-bottom: 12px;
-    /* filter: invert(1) */;
-}
-
 .footer-meta .meta-copyright .info-text p {
     font-size: 13px;
     line-height: 20px;
@@ -2446,12 +2434,6 @@ textarea:-ms-input-placeholder {
 
     .post-onelist-item-container .onelist-item-thumb {
         min-height: 180px
-    }
-}
-
-@media(max-width:410px) {
-    .meta-copyright-info .info-logo {
-        display: none
     }
 }
 
